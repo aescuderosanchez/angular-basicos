@@ -1,0 +1,25 @@
+<h1>{{nombre}}</h1>
+
+<!-- Description list -->
+<dl>
+    <!-- Description table -->
+    <td> Nombre: </td>
+    <!-- Description -->
+    <dd> {{nombre}}</dd>
+
+
+      <td> Edad: </td>
+      <dd> {{edad}}</dd>
+    <td> Función: </td>
+    <dd> {{obtenerNombre()}}</dd>
+
+    <!-- Mostramos el nombre en mayúsculas -->
+    <td> Capitalizado: </td>
+    <dd> {{nombreCapitalizado}}</dd>
+</dl>
+
+<!-- Concepto de one way data binding -->
+<button (click) = "cambiarNombre()"> Cambiar Héroe</button>
+<button (click) = "cambiarEdad()"> Cambiar edad</button>
+
+

@@ -1,0 +1,26 @@
+<p>Listado de Héroes</p>
+
+<!-- Sólo aparece el h3 si es igual a true -->
+<!-- Si el heroe borrado no está vacío, se muestra  -->
+<div *ngIf="heroeBorrado; else noBorrado">
+    <!-- Unorder list -->
+    <h3>Héroe borrado: <small>{{heroeBorrado}}</small></h3>
+</div>
+<!-- Muestra el contenido basado el la condición del else, es decir, si no se muestra
+la condición del ngIf, muestra este template-->
+<ng-template #noBorrado><h3>No he borrado nada</h3>
+</ng-template>
+
+
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<!-- *ngFor es igual que un ciclo for pero dentro del html -->
+<ul>
+    <li *ngFor="let heroe of heroes; let i= index">
+        <!-- Para cada heroe mostramos su nombre -->
+        {{i + 1}} - {{ heroe }}
+
+    </li>
+
+</ul>
